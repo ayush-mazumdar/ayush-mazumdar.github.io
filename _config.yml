@@ -1,11 +1,10 @@
 ### Site Settings ###
-title               : portfolYOU
+title               : Ayush Mazumdar                     # CHANGED: was "portfolYOU"
 description         : >-
-                      I turn coffee :coffee: into code,
-                      use tabs over spaces
-                      and never broke production.
-baseurl             : "/portfolYOU"            # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
-repository          : yousinix/portfolYOU      # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+                      Electrical Engineering student building          
+                      FPGA, embedded, and signal processing projects.   
+baseurl             : ""                                 # CHANGED: empty quotes since you're hosting at <username>.github.io directly
+repository          : ayush-mazumdar/ayush-mazumdar.github.io   # CHANGED: was yousinix/portfolYOU — needed for remote project auto-import to work
 remote_theme        : yousinix/portfolYOU
 open_new_tab        : false                    # Opens external URLs in new tab (works for posts, projects and navbar only)
 
@@ -20,29 +19,29 @@ nav_exclude:                                            # The following paths ar
   - pages/tags.html
   - pages/404.html
   - pages/index.md
-  - documentation/partials/**                           # For Documentation Only
+# - documentation/partials/**                           # COMMENTED OUT: documentation-only, not part of your site
 
 
 ### Author Info ###
 author:
-  name              : John Doe
-  image             : https://i.imgur.com/uyDNQnn.jpg
-  behance           : your_username
+  name              : Ayush Mazumdar                    # CHANGED: was "John Doe"
+  image             : /assets/img/profile.jpg            # CHANGED: point this at your own headshot once uploaded to assets/img/
+# behance           : your_username                      # COMMENTED OUT: not used — uncomment and fill in if you want a Behance link
 # dribbble          : your_username
-  email             : username@domain.com
-  facebook          : your_username
-  github            : your_username
+  email             : ayush.mazumdar@ucalgary.ca          # CHANGED: was "username@domain.com"
+# facebook          : your_username                      # COMMENTED OUT: not used
+  github            : ayush-mazumdar                      # CHANGED: was "your_username"
 # gitlab            : your_username
 # instagram         : your_username
 # kaggle            : your_username
-  linkedin          : your_username
-  medium            : your_username
+  linkedin          : ayushmazumdar                       # CHANGED: was "your_username" — this should match the part after linkedin.com/in/
+# medium            : your_username                       # COMMENTED OUT: not used
 # soundcloud        : your_username
 # spotify           : your_username
 # stackoverflow     : your_user_id
 # tumblr            : your_username.tumblr.com
 # twitch            : your_username
-  twitter           : your_username
+# twitter           : your_username                       # COMMENTED OUT: not used — uncomment and fill in if you want a Twitter/X link
 # vimeo             : your_username
 # youtube           : your_channel_name
 # keybase           : your_username
@@ -57,18 +56,18 @@ collections:
   projects:
     output: true
     permalink: /projects/:name
-  elements:                                             # For Documentation Only
-    output: true                                        # For Documentation Only
+# elements:                                             # COMMENTED OUT: documentation-only collection, not needed on your site
+#   output: true
 
 
 ### Disqus ###
 disqus:
-  shortname: your-short-name-disqus                     # Your website Shortname on disqus
+  shortname: your-short-name-disqus                     # NOTE: leave as-is unless you set up Disqus comments on blog posts — not needed for a project portfolio
 
 
 ### Analytics ###
 analytics:
-  enabled: false                                        # Set true to enable analytics
+  enabled: false                                        # NOTE: set true + add your Google Analytics tracking ID below if you want visitor analytics
   google:
     tracking_id: your-google-tracking-id
 
@@ -76,7 +75,7 @@ analytics:
 ### Buy me a coffee ###
 # See https://www.buymeacoffee.com/
 buymeacoffee:
-  enabled: false
+  enabled: false                                         # NOTE: leave false — not relevant for an internship portfolio
   username: your_username
   color: "#007bff"
   message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
@@ -90,11 +89,11 @@ defaults:
       type: "projects"
     values:
       layout: "page"
-  - scope:                                              # For Documentation Only
-      path: ""                                          # For Documentation Only
-      type: "elements"                                  # For Documentation Only
-    values:                                             # For Documentation Only
-      layout: "element"                                 # For Documentation Only
+# - scope:                                              # COMMENTED OUT: documentation-only, not needed on your site
+#     path: ""
+#     type: "elements"
+#   values:
+#     layout: "element"
   - scope:
       path: ""
       type: "posts"
