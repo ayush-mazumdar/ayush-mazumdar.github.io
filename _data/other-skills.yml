@@ -1,7 +1,11 @@
-- name: Adobe Photoshop
-  percentage: 95
+- name: PCB and Circuit Testing and Debugging
+  percentage: 85
   color: info
 
-- name: Adobe Illustrator
-  percentage: 90
+- name: Technical Documentation
+  percentage: 80
   color: success
+
+  - name: Leadership and Collaboration
+  percentage: 80
+  color: light
