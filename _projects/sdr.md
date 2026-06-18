@@ -30,7 +30,7 @@ It started in a transistors course, where I built a simple BJT-based AM radio re
 
 <div class="embed-responsive embed-responsive-16by9 mb-3">
   <!-- REPLACE VIDEO_ID_HERE with your YouTube video ID (the part after watch?v= in the URL) -->
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gyfGUxuU7ds" title="BJT AM Radio Demo" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="BJT AM Radio Demo" allowfullscreen></iframe>
 </div>
 <p class="text-center text-muted"><small>BJT AM radio, transistors class — functional, but noisy and unstable.</small></p>
 
@@ -42,7 +42,7 @@ Before committing to a custom PCB, the full signal chain was validated on a brea
 
 <div class="embed-responsive embed-responsive-16by9 mb-3">
   <!-- REPLACE VIDEO_ID_HERE with your YouTube video ID -->
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/z7dXpS4ZZGg" title="Breadboard Demo" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="Breadboard Demo" allowfullscreen></iframe>
 </div>
 <p class="text-center text-muted"><small>Breadboard validation — proving out the signal chain before PCB fabrication.</small></p>
 
@@ -50,7 +50,7 @@ Before committing to a custom PCB, the full signal chain was validated on a brea
 
 <div class="embed-responsive embed-responsive-16by9 mb-3">
   <!-- REPLACE VIDEO_ID_HERE with your YouTube video ID -->
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mcBP4-E0OeI" title="Final SDR Demo" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="Final SDR Demo" allowfullscreen></iframe>
 </div>
 <p class="text-center text-muted"><small>Final system — custom PCB, full DSP pipeline, enclosure.</small></p>
 
@@ -80,7 +80,7 @@ Before committing to a custom PCB, the full signal chain was validated on a brea
   best visual story — e.g. block diagram first, then schematic, then PCB, then enclosure.
 -->
 <style>
-  #sdrCarousel .carousel-item {
+  #sdrCarousel .carousel-item.active {
     display: flex;
     flex-direction: column;
   }
