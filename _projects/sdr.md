@@ -1,18 +1,18 @@
 ---
 name: Software-Defined AM Radio
-tools: [SystemVerilog, Vivado, Python, FPGA, PCB Design]
+tools: [SystemVerilog, Vivado, Python, FPGA]
 image: /assets/img/projects/sdr/cover.png
-description: An FPGA-based software-defined AM radio built from the ground up — from a noisy BJT receiver in a transistors class to a fully digital DSP pipeline with a custom PCB.
+description: An FPGA-based software-defined AM radio built from the ground up, including a fully digital DSP pipeline with a custom PCB.
 ---
 
 # Software-Defined AM Radio
 
-**Duration:** January 2026 – April 2026
+**Duration:** January 2026 – April 2026\
 **Role:** Project Lead & Software Lead | 6-person team
 
 ![SDR Cover](/assets/img/projects/sdr/cover.png)
 
-A fully digital, FPGA-based software-defined AM radio — designed, built, and tuned from scratch. This project covers the complete signal chain: RF front end, custom PCB, and a SystemVerilog DSP pipeline including FIR filtering, demodulation, and DC offset correction.
+A fully digital, FPGA-based software-defined AM radio, designed, built, and tuned from scratch. This project covers the complete signal chain: RF front end, custom PCB, and a SystemVerilog DSP pipeline including FIR filtering, demodulation, and DC offset correction.
 
 ---
 
@@ -26,33 +26,35 @@ A fully digital, FPGA-based software-defined AM radio — designed, built, and t
   whole project narrative weight before jumping into the SDR itself.
 -->
 
-It started in a transistors course, where I built a simple BJT-based AM radio receiver on a breadboard. It worked — barely. The audio was faint, noisy, and unstable, but hearing an actual broadcast come through a circuit I'd built myself was enough to get me hooked on RF. That curiosity is what eventually became this project: an attempt to take the same basic idea and rebuild it the right way, replacing analog guesswork with a fully digital, precisely tunable signal chain.
+It started in a transistors course, where I built a simple BJT-based AM radio receiver on a breadboard. It worked... barely. The audio was faint, noisy, and several stations could be heard at once, but hearing an actual broadcast come through a circuit I'd built was enough to get me hooked on RF. That curiosity is what eventually became this project: an attempt to take the same basic idea and rebuild it the right way, replacing analog guesswork with a fully digital, precisely tunable signal chain.
 
 <div class="embed-responsive embed-responsive-16by9 mb-3">
   <!-- REPLACE VIDEO_ID_HERE with your YouTube video ID (the part after watch?v= in the URL) -->
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gyfGUxuU7ds" title="BJT AM Radio Demo" allowfullscreen></iframe>
 </div>
-<p class="text-center text-muted"><small>BJT AM radio, transistors class — functional, but noisy and unstable.</small></p>
+<p class="text-center text-muted"><small>BJT AM radio, transistors class: functional, but noisy and quiet.</small></p>
 
 ---
 
 ### Breadboard Demo
 
-Before committing to a custom PCB, the full signal chain was validated on a breadboard to confirm the DSP pipeline and RF front end worked together before investing in fabrication.
+The first SDR iteration. It had a sharp FIR filter to prevent adjacent-channel bleeding, and an LM386 audio amplifier was used to bring up the volume. Before committing to a custom PCB, the full signal chain was validated on a breadboard to confirm that the DSP pipeline and RF front end worked together before investing in fabrication.
 
 <div class="embed-responsive embed-responsive-16by9 mb-3">
   <!-- REPLACE VIDEO_ID_HERE with your YouTube video ID -->
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/z7dXpS4ZZGg" title="Breadboard Demo" allowfullscreen></iframe>
 </div>
-<p class="text-center text-muted"><small>Breadboard validation — proving out the signal chain before PCB fabrication.</small></p>
+<p class="text-center text-muted"><small>Breadboard validation: testing the signal chain before PCB fabrication.</small></p>
 
 ## Final Demo
+
+This was the result of our efforts. A custom PCB, gain adjustments, and some nifty coding were used to nearly eliminate noise. Volume control and channel selection were integrated, allowing the user to tune in to all 5 local AM stations. The addition of a screen allowed for the display of the current channel and the FFT audio spectrum. And the whole system was encased in a 3D-printed enclosure.
 
 <div class="embed-responsive embed-responsive-16by9 mb-3">
   <!-- REPLACE VIDEO_ID_HERE with your YouTube video ID -->
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mcBP4-E0OeI" title="Final SDR Demo" allowfullscreen></iframe>
 </div>
-<p class="text-center text-muted"><small>Final system — custom PCB, full DSP pipeline, enclosure.</small></p>
+<p class="text-center text-muted"><small>Final system: Full functionality with custom PCB and 3D-printed shell.</small></p>
 
 ---
 
