@@ -67,26 +67,16 @@ Before committing to a custom PCB, the full signal chain was validated on a brea
 
 ## System Stats
 
-<div class="table-responsive mb-4">
-<table class="table table-bordered table-hover">
-  <thead>
-    <tr>
-      <th>Metric</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Operating Voltage</td><td><!-- e.g. 3.3V logic / 5V analog --></td></tr>
-    <tr><td>Continuous Runtime</td><td><!-- e.g. Tested stable over 4+ hours --></td></tr>
-    <tr><td>Software Latency (end-to-end)</td><td><!-- e.g. ~12 ms input to audio out --></td></tr>
-    <tr><td>FIR Filter Cutoff</td><td><!-- e.g. 5 kHz low-pass, 64-tap --></td></tr>
-    <tr><td>PWM Resolution</td><td><!-- e.g. 10-bit @ 48 kHz --></td></tr>
-    <tr><td>Signal-to-Noise Ratio</td><td>9.8 dB → 30.6 dB</td></tr>
-    <tr><td>Clock Frequency</td><td><!-- e.g. 100 MHz system clock --></td></tr>
-    <tr><td>ADC Sampling Rate</td><td><!-- fill in --></td></tr>
-  </tbody>
-</table>
-</div>
+| Metric | Value |
+|---|---|
+| Operating Voltage | <!-- e.g. 3.3V logic / 5V analog --> |
+| Continuous Runtime | <!-- e.g. Tested stable over 4+ hours --> |
+| Software Latency (end-to-end) | <!-- e.g. ~12 ms input to audio out --> |
+| FIR Filter Cutoff | <!-- e.g. 5 kHz low-pass, 64-tap --> |
+| PWM Resolution | <!-- e.g. 10-bit @ 48 kHz --> |
+| Signal-to-Noise Ratio | 9.8 dB → 30.6 dB |
+| Clock Frequency | <!-- e.g. 100 MHz system clock --> |
+| ADC Sampling Rate | <!-- fill in --> |
 
 ---
 
@@ -98,6 +88,25 @@ Before committing to a custom PCB, the full signal chain was validated on a brea
   renders). Just change the image src and the caption text. Order them however tells the
   best visual story — e.g. block diagram first, then schematic, then PCB, then enclosure.
 -->
+<style>
+  #sdrCarousel .carousel-caption {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    color: #000 !important;
+    bottom: 0;
+  }
+  #sdrCarousel .carousel-caption p {
+    color: #000 !important;
+    margin: 0;
+  }
+  #sdrCarousel .carousel-control-prev-icon,
+  #sdrCarousel .carousel-control-next-icon {
+    filter: invert(1) grayscale(100);
+  }
+  #sdrCarousel .carousel-indicators li {
+    background-color: #000 !important;
+  }
+</style>
+
 <div id="sdrCarousel" class="carousel slide mb-4" data-ride="false">
 
   <ol class="carousel-indicators">
