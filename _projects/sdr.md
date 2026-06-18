@@ -38,7 +38,7 @@ It started in a transistors course, where I built a simple BJT-based AM radio re
 
 ### Breadboard Demo
 
-The first SDR iteration. It had a sharp FIR filter to prevent adjacent-channel bleeding, and an LM386 audio amplifier was used to bring up the volume. Before committing to a custom PCB, the full signal chain was validated on a breadboard to confirm that the DSP pipeline and RF front end worked together before investing in fabrication.
+The first SDR iteration. It had a sharp FIR filter to prevent adjacent-channel bleeding, and an LM386 audio amplifier was used to bring up the volume. Before committing to a custom PCB, the full signal chain was validated on a breadboard to confirm that the DSP pipeline and RF front end worked together.
 
 <div class="embed-responsive embed-responsive-16by9 mb-3">
   <!-- REPLACE VIDEO_ID_HERE with your YouTube video ID -->
@@ -55,6 +55,58 @@ This was the result of our efforts. A custom PCB, gain adjustments, and some nif
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mcBP4-E0OeI" title="Final SDR Demo" allowfullscreen></iframe>
 </div>
 <p class="text-center text-muted"><small>Final system: Full functionality with custom PCB and 3D-printed shell.</small></p>
+
+---
+
+## Design Process
+
+<!--
+  Write freely below — this is the narrative section. Suggested structure left
+  as headers; feel free to add/remove/reorder. Each <details> block is collapsed
+  by default so the page stays skimmable, but expands for anyone who wants depth.
+-->
+
+<details open>
+<summary><strong>Background & Motivation</strong></summary>
+
+<!-- Why an AM SDR specifically? What was the goal beyond "improve on the transistors-class radio"? -->
+test 1
+</details>
+
+<details>
+<summary><strong>Iteration 1 — Initial Architecture</strong></summary>
+
+<!-- What was the first working version? What did it get right/wrong? -->
+test2
+</details>
+
+<details>
+<summary><strong>Iteration 2 — Refinement</strong></summary>
+
+<!-- What changed and why? What problem prompted this iteration? -->
+
+</details>
+
+<details>
+<summary><strong>Iteration 3 — Final Design</strong></summary>
+
+<!-- What's different in the final version? What pushed SNR from 9.8 dB to 30.6 dB? -->
+
+</details>
+
+<details>
+<summary><strong>Biggest Challenges</strong></summary>
+
+<!-- PCB noise debugging, timing closure, team coordination, whatever was hardest -->
+
+</details>
+
+<details>
+<summary><strong>What I'd Do Differently</strong></summary>
+
+<!-- Optional but strong for interviews — shows reflection and engineering maturity -->
+
+</details>
 
 ---
 
@@ -144,58 +196,6 @@ This was the result of our efforts. A custom PCB, gain adjustments, and some nif
     <span class="sr-only">Next</span>
   </a>
 </div>
-
----
-
-## Design Process
-
-<!--
-  Write freely below — this is the narrative section. Suggested structure left
-  as headers; feel free to add/remove/reorder. Each <details> block is collapsed
-  by default so the page stays skimmable, but expands for anyone who wants depth.
--->
-
-<details open>
-<summary><strong>Background & Motivation</strong></summary>
-
-<!-- Why an AM SDR specifically? What was the goal beyond "improve on the transistors-class radio"? -->
-test 1
-</details>
-
-<details>
-<summary><strong>Iteration 1 — Initial Architecture</strong></summary>
-
-<!-- What was the first working version? What did it get right/wrong? -->
-test2
-</details>
-
-<details>
-<summary><strong>Iteration 2 — Refinement</strong></summary>
-
-<!-- What changed and why? What problem prompted this iteration? -->
-
-</details>
-
-<details>
-<summary><strong>Iteration 3 — Final Design</strong></summary>
-
-<!-- What's different in the final version? What pushed SNR from 9.8 dB to 30.6 dB? -->
-
-</details>
-
-<details>
-<summary><strong>Biggest Challenges</strong></summary>
-
-<!-- PCB noise debugging, timing closure, team coordination, whatever was hardest -->
-
-</details>
-
-<details>
-<summary><strong>What I'd Do Differently</strong></summary>
-
-<!-- Optional but strong for interviews — shows reflection and engineering maturity -->
-
-</details>
 
 ---
 
