@@ -12,7 +12,7 @@ description: An FPGA-based software-defined AM radio built from the ground up, i
 
 ![SDR Cover](/assets/img/projects/sdr/cover.png)
 
-A fully digital, FPGA-based software-defined AM radio, designed, built, and tuned from scratch. This project covers the complete signal chain: RF front end, custom PCB, and a SystemVerilog DSP pipeline including FIR filtering, demodulation, and DC offset correction.
+A fully digital, software-defined AM radio, designed, built, and tuned from scratch on the Basys-3 FPGA. This project covers the complete signal chain: RF front end, custom PCB, and a SystemVerilog DSP pipeline including FIR filtering, demodulation, and DC offset correction.
 
 ---
 
@@ -58,7 +58,7 @@ This was the result of our efforts. A custom PCB, gain adjustments, and some nif
 
 ---
 
-## Design Process
+## Design Specifics
 
 <!--
   Write freely below — this is the narrative section. Suggested structure left
@@ -67,10 +67,10 @@ This was the result of our efforts. A custom PCB, gain adjustments, and some nif
 -->
 
 <details open>
-<summary><strong>Background & Motivation</strong></summary>
+<summary><strong>Front End Hardware</strong></summary>
 
 <!-- Why an AM SDR specifically? What was the goal beyond "improve on the transistors-class radio"? -->
-test 1
+We built a Tayloe detector to act as our RF front end. This system is a 1:4 demultiplexer that splits the signal from the antenna into 4 in-phase and quadrature signals (i+, i-, q+, q-), where each signal is delayed by a 90-degree offset. The in-phase and quadrature signals are then combined by their own differential amplifier, before being inputted into the FPGA. By controlling the rate at which the demux select-bits change, we can essentially mix the antenna signals with any signal of our choice. In this way, the Tayloe detector acts as a coherent demodulator, and has the additional benefit of converting a high-frequency signal down to baseband.
 </details>
 
 <details>
