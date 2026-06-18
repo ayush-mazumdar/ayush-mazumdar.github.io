@@ -39,17 +39,6 @@ It started in a transistors course, where I built a simple BJT-based AM radio re
 
 ---
 
-## Final Demo
-
-<div class="embed-responsive embed-responsive-16by9 mb-3">
-  <!-- REPLACE SRC: upload your .mov as .mp4 to assets/video/sdr/final-demo.mp4 -->
-  <video class="embed-responsive-item" controls poster="/assets/img/projects/sdr/final-poster.png">
-    <source src="/assets/video/sdr/final-demo.mp4" type="video/mp4">
-    Your browser does not support embedded video.
-  </video>
-</div>
-<p class="text-center text-muted"><small>Final system — custom PCB, full DSP pipeline, enclosure.</small></p>
-
 ### Breadboard Demo
 
 Before committing to a custom PCB, the full signal chain was validated on a breadboard to confirm the DSP pipeline and RF front end worked together before investing in fabrication.
@@ -63,13 +52,24 @@ Before committing to a custom PCB, the full signal chain was validated on a brea
 </div>
 <p class="text-center text-muted"><small>Breadboard validation — proving out the signal chain before PCB fabrication.</small></p>
 
+## Final Demo
+
+<div class="embed-responsive embed-responsive-16by9 mb-3">
+  <!-- REPLACE SRC: upload your .mov as .mp4 to assets/video/sdr/final-demo.mp4 -->
+  <video class="embed-responsive-item" controls poster="/assets/img/projects/sdr/final-poster.png">
+    <source src="/assets/video/sdr/final-demo.mp4" type="video/mp4">
+    Your browser does not support embedded video.
+  </video>
+</div>
+<p class="text-center text-muted"><small>Final system — custom PCB, full DSP pipeline, enclosure.</small></p>
+
 ---
 
 ## System Stats
 
 <div class="table-responsive mb-4">
 <table class="table table-bordered table-hover">
-  <thead class="thead-dark">
+  <thead class="thead-light">
     <tr>
       <th>Metric</th>
       <th>Value</th>
@@ -159,19 +159,19 @@ Before committing to a custom PCB, the full signal chain was validated on a brea
   by default so the page stays skimmable, but expands for anyone who wants depth.
 -->
 
-<details open>
+<Test3 open>
 <summary><strong>Background & Motivation</strong></summary>
 
 <!-- Why an AM SDR specifically? What was the goal beyond "improve on the transistors-class radio"? -->
 
-</details>
+</Test1>
 
 <details>
 <summary><strong>Iteration 1 — Initial Architecture</strong></summary>
 
 <!-- What was the first working version? What did it get right/wrong? -->
 
-</details>
+</Test2>
 
 <details>
 <summary><strong>Iteration 2 — Refinement</strong></summary>
