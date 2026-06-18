@@ -97,19 +97,9 @@ Before committing to a custom PCB, the full signal chain was validated on a brea
   #sdrCarousel .carousel-control-next-icon {
     filter: invert(1) grayscale(100);
   }
-  #sdrCarousel .carousel-indicators li {
-    background-color: #000 !important;
-  }
 </style>
 
 <div id="sdrCarousel" class="carousel slide mb-4" data-ride="false">
-
-  <ol class="carousel-indicators">
-    <li data-target="#sdrCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#sdrCarousel" data-slide-to="1"></li>
-    <li data-target="#sdrCarousel" data-slide-to="2"></li>
-    <li data-target="#sdrCarousel" data-slide-to="3"></li>
-  </ol>
 
   <div class="carousel-inner">
 
