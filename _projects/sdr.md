@@ -98,22 +98,47 @@ Before committing to a custom PCB, the full signal chain was validated on a brea
   renders). Just change the image src and the caption text. Order them however tells the
   best visual story — e.g. block diagram first, then schematic, then PCB, then enclosure.
 -->
-<div class="carousel-item active">
-  <img src="/assets/img/projects/sdr/block-diagram.png" class="d-block w-100" alt="System block diagram">
-</div>
+<div id="sdrCarousel" class="carousel slide mb-4" data-ride="false">
 
-<div class="carousel-item">
-  <img src="/assets/img/projects/sdr/circuit-schematic.png" class="d-block w-100" alt="Circuit schematic">
-</div>
+  <ol class="carousel-indicators">
+    <li data-target="#sdrCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#sdrCarousel" data-slide-to="1"></li>
+    <li data-target="#sdrCarousel" data-slide-to="2"></li>
+    <li data-target="#sdrCarousel" data-slide-to="3"></li>
+  </ol>
 
-<div class="carousel-item">
-  <img src="/assets/img/projects/sdr/pcb-layout.png" class="d-block w-100" alt="PCB layout">
-</div>
+  <div class="carousel-inner">
 
-<div class="carousel-item">
-  <img src="/assets/img/projects/sdr/enclosure.png" class="d-block w-100" alt="Enclosure design">
-</div>
+    <div class="carousel-item active">
+      <img src="/assets/img/projects/sdr/block-diagram.png" class="d-block w-100" alt="System block diagram">
+      <div class="carousel-caption d-none d-md-block">
+        <p>System block diagram — RF front end through DSP pipeline to audio output.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="/assets/img/projects/sdr/circuit-schematic.png" class="d-block w-100" alt="Circuit schematic">
+      <div class="carousel-caption d-none d-md-block">
+        <p>Circuit schematic for the analog front end.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="/assets/img/projects/sdr/pcb-layout.png" class="d-block w-100" alt="PCB layout">
+      <div class="carousel-caption d-none d-md-block">
+        <p>Custom PCB layout, designed for the analog-to-digital interface.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="/assets/img/projects/sdr/enclosure.png" class="d-block w-100" alt="Enclosure design">
+      <div class="carousel-caption d-none d-md-block">
+        <p>Final enclosure design.</p>
+      </div>
+    </div>
+
   </div>
+
   <a class="carousel-control-prev" href="#sdrCarousel" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -122,31 +147,7 @@ Before committing to a custom PCB, the full signal chain was validated on a brea
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-  <ol class="carousel-indicators">
-    <li data-target="#sdrCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#sdrCarousel" data-slide-to="1"></li>
-    <li data-target="#sdrCarousel" data-slide-to="2"></li>
-    <li data-target="#sdrCarousel" data-slide-to="3"></li>
-  </ol>
-  <p class="carousel-caption-external" id="sdrCaptionText">System block diagram — RF front end through DSP pipeline to audio output.</p>
 </div>
-<script>
-  (function () {
-    var captions = [
-      "System block diagram — RF front end through DSP pipeline to audio output.",
-      "Circuit schematic for the analog front end.",
-      "Custom PCB layout, designed for the analog-to-digital interface.",
-      "Final enclosure design."
-    ];
-    var carousel = document.getElementById('sdrCarousel');
-    var captionEl = document.getElementById('sdrCaptionText');
-    if (carousel) {
-      carousel.addEventListener('slid.bs.carousel', function (e) {
-        captionEl.textContent = captions[e.to] || "";
-      });
-    }
-  })();
-</script>
 
 ---
 
