@@ -159,19 +159,19 @@ Before committing to a custom PCB, the full signal chain was validated on a brea
   by default so the page stays skimmable, but expands for anyone who wants depth.
 -->
 
-<Test3 open>
+<details open>
 <summary><strong>Background & Motivation</strong></summary>
 
 <!-- Why an AM SDR specifically? What was the goal beyond "improve on the transistors-class radio"? -->
-
-</Test1>
+test 1
+</details>
 
 <details>
 <summary><strong>Iteration 1 — Initial Architecture</strong></summary>
 
 <!-- What was the first working version? What did it get right/wrong? -->
-
-</Test2>
+test2
+</details>
 
 <details>
 <summary><strong>Iteration 2 — Refinement</strong></summary>
