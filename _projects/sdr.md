@@ -2,7 +2,7 @@
 name: Software-Defined AM Radio
 tools: [SystemVerilog, Vivado, Python, FPGA]
 image: /assets/img/projects/sdr/cover.png
-description: An FPGA-based software-defined AM radio built from the ground up, including a fully digital DSP pipeline with a custom PCB.
+description: An FPGA-based software-defined AM radio built from the ground up, including a fully functional DSP pipeline with a custom PCB.
 ---
 
 # Software-Defined AM Radio
@@ -110,18 +110,18 @@ Due to our heavy budget constraints, we decided to make use of the existing feat
 
 ---
 
-## System Stats
+## Stats
 
 | Metric | Value |
 |---|---|
-| Operating Voltage | <!-- e.g. 3.3V logic / 5V analog --> |
-| Continuous Runtime | <!-- e.g. Tested stable over 4+ hours --> |
-| Software Latency (end-to-end) | <!-- e.g. ~12 ms input to audio out --> |
-| FIR Filter Cutoff | <!-- e.g. 5 kHz low-pass, 64-tap --> |
-| PWM Resolution | <!-- e.g. 10-bit @ 48 kHz --> |
-| Signal-to-Noise Ratio | 9.8 dB → 30.6 dB |
-| Clock Frequency | <!-- e.g. 100 MHz system clock --> |
-| ADC Sampling Rate | <!-- fill in --> |
+| Operating Voltage | 3.3V logic / 5V analog |
+| Max Current Draw | 250 mA |
+| Software Latency (end-to-end) | 1.5 ms (150 clock cycles) |
+| FIR Filter Cutoff | 8 kHz low-pass, 128-tap |
+| PWM Resolution | 10-bit @ 97.7 kHz |
+| Signal-to-Noise Ratio | 30.6 dB |
+| ADC Sampling Rate | 400 kSPS (per channel) |
+| Total Costs | $111.03 (26% under budget) |
 
 ---
 
@@ -160,28 +160,28 @@ Due to our heavy budget constraints, we decided to make use of the existing feat
     <div class="carousel-item active">
       <img src="/assets/img/projects/sdr/block-diagram.png" class="d-block w-100" alt="System block diagram">
       <div class="carousel-caption d-none d-md-block">
-        <p>System block diagram — RF front end through DSP pipeline to audio output.</p>
+        <p>System block diagram: RF front end through DSP pipeline to audio output.</p>
       </div>
     </div>
 
     <div class="carousel-item">
       <img src="/assets/img/projects/sdr/circuit-schematic.png" class="d-block w-100" alt="Circuit schematic">
       <div class="carousel-caption d-none d-md-block">
-        <p>Circuit schematic for the analog front end.</p>
+        <p>Complete circuit schematic.</p>
       </div>
     </div>
 
     <div class="carousel-item">
       <img src="/assets/img/projects/sdr/pcb-layout.png" class="d-block w-100" alt="PCB layout">
       <div class="carousel-caption d-none d-md-block">
-        <p>Custom PCB layout, designed for the analog-to-digital interface.</p>
+        <p>Custom 4-layer PCB layout (separate analog, digital, power, and ground planes).</p>
       </div>
     </div>
 
     <div class="carousel-item">
       <img src="/assets/img/projects/sdr/enclosure.png" class="d-block w-100" alt="Enclosure design">
       <div class="carousel-caption d-none d-md-block">
-        <p>Final enclosure design.</p>
+        <p>Photo of internals and wiring.</p>
       </div>
     </div>
 
