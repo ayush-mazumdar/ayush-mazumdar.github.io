@@ -29,11 +29,8 @@ A fully digital, FPGA-based software-defined AM radio — designed, built, and t
 It started in a transistors course, where I built a simple BJT-based AM radio receiver on a breadboard. It worked — barely. The audio was faint, noisy, and unstable, but hearing an actual broadcast come through a circuit I'd built myself was enough to get me hooked on RF. That curiosity is what eventually became this project: an attempt to take the same basic idea and rebuild it the right way, replacing analog guesswork with a fully digital, precisely tunable signal chain.
 
 <div class="embed-responsive embed-responsive-16by9 mb-3">
-  <!-- REPLACE SRC: upload your .mov as .mp4 to assets/video/sdr/bjt-radio-demo.mp4 -->
-  <video class="embed-responsive-item" controls poster="/assets/img/projects/sdr/bjt-poster.png">
-    <source src="/assets/video/sdr/bjt-radio-demo.mp4" type="video/mp4">
-    Your browser does not support embedded video.
-  </video>
+  <!-- REPLACE VIDEO_ID_HERE with your YouTube video ID (the part after watch?v= in the URL) -->
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="BJT AM Radio Demo" allowfullscreen></iframe>
 </div>
 <p class="text-center text-muted"><small>BJT AM radio, transistors class — functional, but noisy and unstable.</small></p>
 
@@ -44,22 +41,16 @@ It started in a transistors course, where I built a simple BJT-based AM radio re
 Before committing to a custom PCB, the full signal chain was validated on a breadboard to confirm the DSP pipeline and RF front end worked together before investing in fabrication.
 
 <div class="embed-responsive embed-responsive-16by9 mb-3">
-  <!-- REPLACE SRC: upload your .mov as .mp4 to assets/video/sdr/breadboard-demo.mp4 -->
-  <video class="embed-responsive-item" controls poster="/assets/img/projects/sdr/breadboard-poster.png">
-    <source src="/assets/video/sdr/breadboard-demo.mp4" type="video/mp4">
-    Your browser does not support embedded video.
-  </video>
+  <!-- REPLACE VIDEO_ID_HERE with your YouTube video ID -->
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="Breadboard Demo" allowfullscreen></iframe>
 </div>
 <p class="text-center text-muted"><small>Breadboard validation — proving out the signal chain before PCB fabrication.</small></p>
 
 ## Final Demo
 
 <div class="embed-responsive embed-responsive-16by9 mb-3">
-  <!-- REPLACE SRC: upload your .mov as .mp4 to assets/video/sdr/final-demo.mp4 -->
-  <video class="embed-responsive-item" controls poster="/assets/img/projects/sdr/final-poster.png">
-    <source src="/assets/video/sdr/final-demo.mp4" type="video/mp4">
-    Your browser does not support embedded video.
-  </video>
+  <!-- REPLACE VIDEO_ID_HERE with your YouTube video ID -->
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="Final SDR Demo" allowfullscreen></iframe>
 </div>
 <p class="text-center text-muted"><small>Final system — custom PCB, full DSP pipeline, enclosure.</small></p>
 
@@ -89,10 +80,14 @@ Before committing to a custom PCB, the full signal chain was validated on a brea
   best visual story — e.g. block diagram first, then schematic, then PCB, then enclosure.
 -->
 <style>
+  #sdrCarousel .carousel-item {
+    display: flex;
+    flex-direction: column;
+  }
   #sdrCarousel .carousel-caption {
+    position: static;
     background-color: rgba(255, 255, 255, 0.85) !important;
     color: #000 !important;
-    bottom: 0;
   }
   #sdrCarousel .carousel-caption p {
     color: #000 !important;
