@@ -69,7 +69,7 @@ Before committing to a custom PCB, the full signal chain was validated on a brea
 
 <div class="table-responsive mb-4">
 <table class="table table-bordered table-hover">
-  <thead class="thead-light">
+  <thead>
     <tr>
       <th>Metric</th>
       <th>Value</th>
