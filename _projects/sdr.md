@@ -88,10 +88,17 @@ The PWM output is put through a low-pass reconstruction filter, becoming a smoot
 </details>
 
 <details>
+<summary><strong>Testing and Validation</strong></summary>
+
+<!-- What changed and why? What problem prompted this iteration? -->
+The aggressive nature of the MVP deadline prevented me from constructing rigorous testbenches during the software design phase. Instead, I verified module functionality by tying internal signals to the FPGA's onboard LEDs. With a signal generator, I fed controlled, low-frequency signals directly into the FPGA, and used the LEDs as status indicators to confirm functionality before designing the next module. After completing the software and integrating it with the hardware to build the full system, we noticed some signal integrity issues. These issues were diagnosed by separating the build into 3 subsystems: RF front-end, software, and output audio circuit. Each subsystem was isolated, and lab tools were used to try to recreate the issue and determine the location of the fault. A fix was then drafted and tested in the isolated environment, before we put everything back together and tested the system as a whole. Once we had delivered the working build on schedule for the MVP demo, we had more time and were free to create testbenches to determine specific system statistics and to monitor performance in edge cases.
+</details>
+
+<details>
 <summary><strong>The Time Sink</strong></summary>
 
 <!-- What's different in the final version? What pushed SNR from 9.8 dB to 30.6 dB? -->
-Due to our heavy budget constraints, we decided to make use of the existing features of the Basys-3 to prevent buying external ADCs and local oscillators, which made the design process much more difficult. There were small inaccuracies in the local oscillator. The XADC sampled I and Q sequentially, meaning that there was a small delay between an I signal and its corresponding Q signal. Because of these hardware issues, the CORDIC demodulator was unable to completely get rid of the carrier frequency, which left a bubbling effect on the output that caused the audio to cut in and out sinusoidally. Ultimately, the local oscillator inaccuracy was mitigated by the 4-layer PCB, and the I/Q offset was fixed by intentionally delaying "I", leading to the clean audio shown in our final demo. However, many hours were spent trying to diagnose and patch these issues.
+Due to our heavy budget constraints, we decided to make use of the existing features of the Basys-3 to prevent buying external ADCs and local oscillators, which made the design process much more difficult. There were small inaccuracies in the local oscillator. The XADC sampled I and Q sequentially, meaning that there was a small delay between an "I" signal and its corresponding "Q" signal. Because of these hardware issues, the CORDIC demodulator was unable to completely get rid of the carrier frequency, which left a bubbling effect on the output that caused the audio to cut in and out sinusoidally. Ultimately, the local oscillator inaccuracy was mitigated by the 4-layer PCB, and the I/Q offset was fixed by intentionally delaying "I", leading to the clean audio shown in our final demo. However, many hours were spent trying to diagnose and patch these issues.
 </details>
 
 <!-- #<details>
