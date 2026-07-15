@@ -7,14 +7,14 @@ description: An FPGA-based ramp-compare analog-to-digital converter, with toggle
 
 # Discrete ADC with Successive Approximation
 
-**Duration:** September 2025 – December 2025
+**Duration:** September 2025 – December 2025\
 **Platform:** Basys 3 FPGA (Artix-7) | SystemVerilog, Vivado
 
 ---
 
 ## Base Design Overview
 
-This project implements and compares multiple analog-to-digital conversion techniques using an FPGA. A potentiometer-controlled analog voltage serves as the input, and the system converts it to a digital reading using a comparator. The FPGA uses external PWM-based and R2R-ladder-based 8-bit digital-to-analog converters to generate a known ramp voltage. The comparator compares this known ramp value with the input voltage, outputting HIGH when the ramp voltage is higher than the input, and LOW when the ramp voltage is lower than the input. By incrementally increasing the ramp voltage and monitoring the exact location of the HIGH-to-LOW transition, the system can determine the exact value of the input voltage. The results are displayed on the onboard seven-segment display, and switches can be used to toggle between the 2 ADCs or the Basys 3's built-in XADC serving as the ground-truth reference for accuracy comparison.
+This project implements and compares multiple analog-to-digital conversion techniques using an FPGA. A potentiometer-controlled analog voltage serves as the input, and the system converts it to a digital reading using a comparator. The FPGA uses external PWM-based and R2R-ladder-based 8-bit digital-to-analog converters to generate a known ramp voltage. The comparator compares this known ramp value with the input voltage, outputting HIGH when the ramp voltage is higher than the input, and LOW when the ramp voltage is lower than the input. By incrementally increasing the ramp voltage and monitoring the exact location of the HIGH-to-LOW transition, the system can determine the exact value of the input voltage. The results are displayed on the onboard seven-segment display, and switches can be used to toggle between the 2 ADCs or the Basys 3's built-in XADC which serves as a reference for accuracy comparison.
 
 ---
 
@@ -24,14 +24,14 @@ The analog input signal is split into three paths from a single potentiometer co
 
 | Path | Method | DAC Type | Comparator |
 |---|---|---|---|
-| Path 1 (Reference) | XADC (internal) | — | Built-in |
+| Path 1 (Reference) | XADC (internal) | N/A | N/A |
 | Path 2 | Ramp / SAR | R2R Ladder (10kΩ) | TLV3701 |
 | Path 3 | Ramp / SAR | PWM + RC Lowpass (~16kHz)| TLV3701 |
 
 Path 1 passes through a voltage divider (22kΩ / 10kΩ) to bring the maximum voltage within the XADC's 1V input range (this value is later scaled back to 3.3V in software). Paths 2 and 3 go directly into the positive inputs of two external TLV3701 comparators. The DAC outputs (R2R ladder on 8 GPIO pins for Path 2, RC-filtered PWM on a single GPIO pin for Path 3) feed the comparators' negative inputs.
 
 ![System Block Diagram](/assets/img/projects/sar/system-block-diagram.png)
-*Hardware block diagram — potentiometer input through three conversion paths to seven-segment display.*
+*Hardware block diagram.*
 
 ---
 
