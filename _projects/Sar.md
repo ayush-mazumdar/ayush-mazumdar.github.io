@@ -79,7 +79,7 @@ This design extension pushed the system clock beyond the Basys 3's default 100 M
 
 <div class="embed-responsive embed-responsive-16by9 mb-3">
   <!-- REPLACE VIDEO_ID_HERE with your YouTube video ID -->
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="SAR ADC Oscilloscope Demo" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fT-5uo8aazs" title="SAR ADC Oscilloscope Demo" allowfullscreen></iframe>
 </div>
 <p class="text-center text-muted"><small>Oscilloscope capture of the SAR binary search converging on the input voltage — each step visible as the DAC output homes in from the MSB down.</small></p>
 
@@ -95,8 +95,6 @@ This design extension pushed the system clock beyond the Basys 3's default 100 M
 | Clock Frequency | 180 MHz (PLL) |
 | Worst Negative Slack | 0.447 ns |
 | Max Theoretical Frequency | 184 MHz |
-| LUT Utilization | 12.5% |
-| IO Utilization | 47.2% |
 
 ---
 
