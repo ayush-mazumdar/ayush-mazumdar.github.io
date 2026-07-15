@@ -48,7 +48,7 @@ A timeout condition handles edge cases: if the ramp completes its full sweep wit
 ![Ramp ADC FSM](/assets/img/projects/sar/ramp-fsm.png)
 *Moore FSM state diagram for the Ramp ADC controller.*
 
-### SAR ADC
+### Successive Approximation Register ADC
 
 The SAR ADC is the more algorithmically interesting module. Rather than sweeping through all 256 values linearly like the ramps do, it converges on the result in exactly 8 comparisons using a binary search. It starts by testing the most significant digit first, working its way down and keeping or discarding each bit based on the comparator output until all 8 digits are determined.
 
@@ -60,7 +60,7 @@ The controller uses a 5-state Moore FSM: **IDLE → LOAD_TEST → SETTLE → SAM
 - **SAMPLE** — reads the comparator: if HIGH (input > DAC voltage), the bit is kept; if LOW, it is discarded. Loops back to LOAD_TEST for the next lower bit, or advances to DONE at the LSB
 - **DONE** — outputs the final result, pulses `conversion_done`, clears `busy`, returns to IDLE
 
-The settle delay is critical — without it, the comparator samples the DAC before it has stabilized, producing corrupted results. This is especially noticeable with the PWM path, where the RC filter introduces additional settling time that the R2R path doesn't need.
+The settle delay is critical. Without it, the comparator samples the DAC before it has stabilized, producing corrupted results. This is especially noticeable with the PWM path, where the RC filter introduces additional settling time that the R2R path doesn't need.
 
 ![SAR FSM](/assets/img/projects/sar/sar-fsm.png)
 *5-state Moore FSM for the SAR ADC controller.*
@@ -81,7 +81,7 @@ This design extension pushed the system clock beyond the Basys 3's default 100 M
   <!-- REPLACE VIDEO_ID_HERE with your YouTube video ID -->
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fT-5uo8aazs" title="SAR ADC Oscilloscope Demo" allowfullscreen></iframe>
 </div>
-<p class="text-center text-muted"><small>Oscilloscope capture of the SAR binary search converging on the input voltage — each step visible as the DAC output homes in from the MSB down.</small></p>
+<p class="text-center text-muted"><small>Oscilloscope capture of the SAR binary search converging on the input voltage. Each step is visible as the DAC output homes in from the MSB down.</small></p>
 
 ---
 
